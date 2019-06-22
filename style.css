@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.app {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 50px 0 30px 0;
+    text-align: center;
+    font-size: 40px;
+}
+
+header p {
+    font-size: 20px;
+}
+
+.pads {
+    background: lightblue;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+}
+
+.pads div {
+    height: 100px;
+    width: 100%;
+}
+
+.pad1 {
+    background: #60d394;
+}
+
+.pad2 {
+    background: #d36060;
+}
+
+.pad3 {
+    background: #c060d3;
+}
+
+.pad4 {
+    background: #d3d160;
+}
+
+.pad5 {
+    background: #6860d3;
+}
+
+.pad6 {
+    background: #60b2d3;
+}
