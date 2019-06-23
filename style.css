@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {}
+
+.app {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 50px 0 30px 0;
+    text-align: center;
+    font-size: 40px;
+    font-family: 'Open Sans', 'Montserrat', sans-serif;
+}
+
+header p {
+    font-size: 20px;
+    font-family: 'Montserrat', 'Open Sans', sans-serif;
+}
+
+.pads {
+    margin-bottom: .3rem;
+    width: 97.4%;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    justify-content: center;
+    grid-gap: .1rem;
+}
+
+.pads div {
+    height: 100px;
+    width: 100%;
+}
+
+/*Pulse Animation*/
+@keyframes hvr-pulse-grow {
+    to {
+        transform: scale(1.1);
+    }
+}
+
+.pad1:hover,
+.pad1:focus,
+.pad1:active,
+.pad2:hover,
+.pad2:focus,
+.pad2:active,
+.pad3:hover,
+.pad3:focus,
+.pad3:active,
+.pad4:hover,
+.pad4:focus,
+.pad4:active,
+.pad5:hover,
+.pad5:focus,
+.pad5:active,
+.pad6:hover,
+.pad6:focus,
+.pad6:active {
+    cursor: pointer;
+    animation-name: hvr-pulse-grow;
+    animation-duration: 0.3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.pad1 {
+    background: #60d394;
+}
+
+.pad2 {
+    background: #d36060;
+}
+
+.pad3 {
+    background: #c060d3;
+}
+
+.pad4 {
+    background: #d3d160;
+}
+
+.pad5 {
+    background: #6860d3;
+}
+
+.pad6 {
+    background: #60b2d3;
+}
+
+/*Animations*/
+@keyframes jump {
+    0% {
+        bottom: 0%;
+        left: 20%;
+        height: 5px;
+        width: 5px;
+    }
+
+    50% {
+        bottom: 50%;
+        left: 50%;
+        height: 50px;
+        width: 50px;
+        opacity: 1;
+    }
+
+    100% {
+        bottom: 0%;
+        left: 80%;
+        height: 5px;
+        width: 5px;
+        opacity: .1;
+    }
+}
+
+.visual div {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    bottom: 0%;
+    z-index: -1;
+}
+
+@keyframes flash {
+    0% {
+        opacity: 0;
+    }
+
+    25% {
+        opacity: .25;
+    }
+
+    50% {
+        opacity: .5;
+    }
+
+    75% {
+        opacity: .75;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
