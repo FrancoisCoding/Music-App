@@ -4,9 +4,7 @@
     box-sizing: border-box;
 }
 
-body {
-    font-family: 'Montserrat', sans-serif;
-}
+body {}
 
 .app {
     height: 100vh;
@@ -20,22 +18,59 @@ header h1 {
     margin: 50px 0 30px 0;
     text-align: center;
     font-size: 40px;
+    font-family: 'Open Sans', 'Montserrat', sans-serif;
 }
 
 header p {
     font-size: 20px;
+    font-family: 'Montserrat', 'Open Sans', sans-serif;
 }
 
 .pads {
-    background: lightblue;
-    width: 100%;
+    margin-bottom: .3rem;
+    width: 97.4%;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
+    justify-content: center;
+    grid-gap: .1rem;
 }
 
 .pads div {
     height: 100px;
     width: 100%;
+}
+
+/*Pulse Animation*/
+@keyframes hvr-pulse-grow {
+    to {
+        transform: scale(1.1);
+    }
+}
+
+.pad1:hover,
+.pad1:focus,
+.pad1:active,
+.pad2:hover,
+.pad2:focus,
+.pad2:active,
+.pad3:hover,
+.pad3:focus,
+.pad3:active,
+.pad4:hover,
+.pad4:focus,
+.pad4:active,
+.pad5:hover,
+.pad5:focus,
+.pad5:active,
+.pad6:hover,
+.pad6:focus,
+.pad6:active {
+    cursor: pointer;
+    animation-name: hvr-pulse-grow;
+    animation-duration: 0.3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
 }
 
 .pad1 {
